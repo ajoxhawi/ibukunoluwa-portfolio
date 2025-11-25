@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font: 'poppins' sans-serif;
+        }
+        body{
+            background-color: #1f242d;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .navbar{
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 100;
+        }
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .navbar ul{
+            display: flex;
+        }
+        .navbar ul li{
+            list-style: none;
+            margin-left: 35px;
+        }
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.5s;
+        }
+       .navbar ul li:hover a,
+       .navbar ul li.active a{
+        color: brown;
+       }
+       .home{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 60px 9% 0;
+        color: white;
+       }
+       .home-info h1{
+        font-size: 55px;
+       }
+       .home-info h2{
+        font-size: 32px;
+        margin-top: -10px;
+       }
+       .home-info p{
+        font-size: 16px;
+        margin: 10px 0 25px;
+       }
+       .btn-social{
+        display: flex;
+        align-items: center;
+       }
+       .btn{
+        display: inline-block;
+        padding: 10px 30px;
+        background-color: brown;
+        border: 2px solid brown;
+        border-radius: 40px;
+        box-shadow: 0 0 10px brown;
+        font-size: 16px;
+        color: #1f242d;
+        font-weight: 600;
+        transition: 0.5s;
+       }
+       .btn:hover{
+        background-color: transparent;
+        color: brown;
+        box-shadow: none;
+       }
+       .social{
+        margin-left: 20px;
+       }
+       .social a{
+        display: inline-flex;
+        padding: 8px;
+        border: 2px solid brown;
+        border-radius: 50%;
+        color: brown;
+        font-size: 20px;
+        margin: 0 8px;
+        transition: 0.5s;
+       }
+       .social a:hover{
+        background-color: brown;
+        color: #1f242d;
+        box-shadow: 0 0 10px brown;
+       }
+       .home-img .img-box {
+         width: 32vh;
+         height: 32vh;
+         background-color: red;
+         border-radius: 50%;
+         overflow: hidden;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         padding: 5px;
+      }
+      .home-img .img-box::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%
+        ;
+        height: 100%;
+        border-radius: 50%;
+        box-shadow: 0 0 15px brown;
+        pointer-events: none;
+      }
+        .home-img .img-box .img-item {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+     }
+
+        .home-img .img-box .img-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%; 
+        display: block;
+     }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Ibukunoluwa</a>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="home">
+        <div class="home-info">
+            <h1>Ibukunoluwa Comfort</h1>
+            <h2>I'm a Virtual Assistant</h2>
+            <p>I'm a multi-talented Virtual Assistant skilled in both administration and digital media. From managing your social media presence and creating engaging content to handling email campaigns and maintaining your websites, I provide comprehensive support. I help busy entrepreneurs build their online brand while keep theie day-to-day operations perfectly organized.</p>
+            <div class="btn-social">
+                <a href="#" class="btn" download="Ibukunoluwa_comfort_cv.pdf">Download Cv</a>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="citoma.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
