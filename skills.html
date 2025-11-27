@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background-color: #1f242d;
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            background-color: #1f242d;
+        }
+
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .navbar ul{
+            display: flex;
+        }
+
+        .navbar ul li{
+            list-style: none;
+            margin-left: 35px;
+        }
+
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar ul li:hover a,
+        .navbar ul li.active a{
+            color: brown;
+        }
+        #menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar ul {
+    display: flex;
+}
+@media (max-width: 850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1f242d;
+        width: 40%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        border-top: 2px solid brown;
+        padding-bottom: 20px;
+    }
+    .navbar .nav-links li.active a {
+        color: brown;
+        font-weight: 600;
+    }
+.navbar .nav-links li a {
+        transition: color 0.3s;
+    }
+
+    .navbar .nav-links li:hover a {
+        color: brown;
+    }
+    .navbar .nav-links li {
+        margin: 20px 0;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+        .skills {
+            padding: 120px 9% 100px;
+            background-color: #1f242d;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .skills-heading {
+            font-size: 45px;
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .skills-heading span {
+            color: brown;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .skill-box {
+            background-color: #272d37;
+            padding: 30px 20px;
+            border-radius: 12px;
+            border: 2px solid brown;
+            transition: 0.3s ease;
+            box-shadow: 0 0 10px transparent;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 12px brown;
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            color: brown;
+            margin-bottom: 15px;
+        }
+
+        .skill-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: brown;
+        }
+
+        .skill-box p {
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 20px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+
+    <a href="index.html" class="logo">Ibukunoluwa</a>
+
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+    <section class="skills">
+        <h2 class="skills-heading">My <span>Skills</span></h2>
+
+        <div class="skills-container">
+
+            <div class="skill-box">
+                <i class="fa-solid fa-envelope skill-icon"></i>
+                <h3>Email & Calendar Management</h3>
+                <p>Inbox organization, scheduling, follow-ups, and maintaining smooth, professional communication.</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-clipboard-check skill-icon"></i>
+                <h3>Administrative Support</h3>
+                <p>Data entry, documentation, task coordination, and daily operational organization.</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-bullhorn skill-icon"></i>
+                <h3>Social Media Assistance</h3>
+                <p>Content scheduling, engagement monitoring, and improving digital presence.</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-pen-nib skill-icon"></i>
+                <h3>Content Creation</h3>
+                <p>Writing captions, creating simple graphics, and providing clean, engaging content.</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-users-gear skill-icon"></i>
+                <h3>Client Support</h3>
+                <p>Responding to inquiries, handling feedback, and supporting strong client relationships.</p>
+            </div>
+
+            <div class="skill-box">
+                <i class="fa-solid fa-chart-line skill-icon"></i>
+                <h3>Research & Reporting</h3>
+                <p>Collecting relevant data, conducting research, and presenting clear, structured reports.</p>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>

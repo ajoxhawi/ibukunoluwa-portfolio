@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Ibukunoluwa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background-color: #1f242d;
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1f242d;
+            z-index: 1000;
+        }
+
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .navbar ul{
+            display: flex;
+        }
+
+        .navbar ul li{
+            list-style: none;
+            margin-left: 35px;
+        }
+
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar ul li:hover a,
+        .navbar ul li.active a{
+            color: brown;
+        }
+        #menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+.navbar ul {
+    display: flex;
+}
+@media (max-width: 850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1f242d;
+        width: 40%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        border-top: 2px solid brown;
+        padding-bottom: 20px;
+    }
+    .navbar .nav-links li.active a {
+        color: brown;
+        font-weight: 600;
+    }
+
+    .navbar .nav-links li a {
+        transition: color 0.3s;
+    }
+
+    .navbar .nav-links li:hover a {
+        color: brown;
+    }
+
+    .navbar .nav-links li {
+        margin: 20px 0;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+        .services {
+            padding: 120px 9% 100px;
+            margin-top: 60px;
+        }
+
+        .services-heading {
+            font-size: 45px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-heading span {
+            color: brown;
+        }
+
+        .service-row {
+            display: flex;
+            align-items: flex-start;
+            padding: 25px 20px;
+            border-bottom: 1px solid brown;
+            margin-bottom: 25px;
+            transition: .3s ease;
+        }
+
+        .service-row:hover {
+            padding-left: 35px;
+        }
+
+        .service-icon {
+            font-size: 45px;
+            color: brown;
+            margin-right: 25px;
+            min-width: 60px;
+        }
+
+        .service-content h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+            color: brown;
+        }
+
+        .service-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        @media (max-width: 850px) {
+            .service-row {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-icon {
+                margin: 0 auto 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+
+    <a href="index.html" class="logo">Ibukunoluwa</a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+    <section class="services">
+        <h2 class="services-heading">My <span>Services</span></h2>
+        <div class="service-row">
+            <i class="fa-solid fa-envelope-open-text service-icon"></i>
+            <div class="service-content">
+                <h3>Email & Calendar Management</h3>
+                <p>I organize inboxes, manage follow-ups, schedule appointments, and ensure your communication flows smoothly and professionally.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <i class="fa-solid fa-clipboard-list service-icon"></i>
+            <div class="service-content">
+                <h3>Administrative Assistance</h3>
+                <p>From documentation to task coordination and workflow management, I keep your business organized and running efficiently.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <i class="fa-solid fa-chart-simple service-icon"></i>
+            <div class="service-content">
+                <h3>Social Media Support</h3>
+                <p>I help schedule posts, monitor engagement, respond to comments, and support your online presence.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <i class="fa-solid fa-pen-nib service-icon"></i>
+            <div class="service-content">
+                <h3>Content Writing & Editing</h3>
+                <p>Whether it's captions, messages, or small business content, I create clean and polished writing that reflects your brand.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <i class="fa-solid fa-user-check service-icon"></i>
+            <div class="service-content">
+                <h3>Client/Customer Support</h3>
+                <p>I provide warm communication, handle inquiries, and ensure clients feel valued and supported.</p>
+            </div>
+        </div>
+        <div class="service-row">
+            <i class="fa-solid fa-magnifying-glass-chart service-icon"></i>
+            <div class="service-content">
+                <h3>Research & Reporting</h3>
+                <p>I gather accurate data, conduct market or task-specific research, and create clear, useful reports.</p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background-color: #1f242d;
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .navbar{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 9%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .logo{
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .navbar ul{
+            display: flex;
+        }
+
+        .navbar ul li{
+            list-style: none;
+            margin-left: 35px;
+        }
+
+        .navbar ul li a{
+            font-size: 20px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .navbar ul li:hover a,
+        .navbar ul li.active a{
+            color: brown;
+        }
+
+#menu-toggle {
+    display: none;
+}
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+}
+.navbar ul {
+    display: flex;
+}
+@media (max-width: 850px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1f242d;
+        width: 40%;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        border-top: 2px solid brown;
+        padding-bottom: 20px;
+    }
+    .navbar .nav-links li.active a {
+        color: brown;
+        font-weight: 600;
+    }
+
+    .navbar .nav-links li a {
+        transition: color 0.3s;
+    }
+
+    .navbar .nav-links li:hover a {
+        color: brown;
+    }
+    .navbar .nav-links li {
+        margin: 20px 0;
+    }
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            padding: 120px 9% 100px; 
+            background-color: #1f242d;
+        }
+
+        .about-img-box {
+            width: 35vh;
+            height: 35vh;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid brown;
+            box-shadow: 0 0 15px brown;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-info .heading {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .about-info .heading span {
+            color: brown;
+        }
+
+        .about-info h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: brown;
+        }
+
+        .about-info p {
+            font-size: 16px;
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+        @media (max-width: 900px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-img-box {
+                width: 28vh;
+                height: 28vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+   <nav class="navbar">
+
+    <a href="index.html" class="logo">Ibukunoluwa</a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+</nav>
+
+    <section class="about" id="about">
+
+        <div class="about-img">
+            <div class="about-img-box">
+                <img src="citoma.jpg" alt="Ibukunoluwa">
+            </div>
+        </div>
+
+        <div class="about-info">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Administrative Virtual Assistant</h3>
+
+            <p>
+                Hi, I'm Ibukunoluwa, an empathetic and dependable Administrative Virtual Assistant 
+                with proven experience supporting entrepreneurs and small business teams.
+            </p>
+
+            <p>
+                My expertise lies in bringing structure and clarity to businesses through thoughtful 
+                organization, clear communication, and strategic digital support. I approach every 
+                administrative task as a creative challenge, turning chaos into order and ideas into 
+                smooth, actionable workflows.
+            </p>
+
+            <p>
+                To me, exceptional virtual assistance goes beyond managing schedules or emails, 
+                it's about creating an experience where business owners feel supported, confident, 
+                and free to focus on what matters most. Whether it's refining systems, streamlining 
+                operations, or managing projects with precision, my goal is to make productivity feel 
+                effortless, efficient, and human.
+            </p>
+        </div>
+
+    </section>
+
+</body>
+</html>
